@@ -1,0 +1,24 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: veganactivist-proxy
+  namespace: {{ .Values.environment }}
+  annotations:
+    cert-manager.io/cluster-issuer: {{ .Values.certIssuer }}
+spec:
+  ingressClassName: nginx
+  tls:
+    - hosts:
+        - {{ .Values.host }}
+      secretName: veganactivist-ch-test-tls
+  rules:
+    - host: {{ .Values.host }}
+      http:
+        paths:
+        - pathType: Prefix
+          path: /
+          backend:
+            service:
+              name: veganactivist-frontend
+              port:
+                number: 80

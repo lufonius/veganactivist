@@ -4,6 +4,6 @@ COPY ./default.conf /etc/nginx/conf.d
 
 WORKDIR /usr/share/nginx/html
 
-COPY index.html .
+COPY ./dist .
 
 EXPOSE 8000

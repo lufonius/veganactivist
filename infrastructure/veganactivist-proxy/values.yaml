@@ -1,0 +1,3 @@
+certIssuer: veganactivist-test-lets-encrypt-issuer
+environment: test
+host: test.veganactivist.ch

@@ -1,0 +1,5 @@
+environment: test
+appVersion: 0.0.1-SNAPSHOT
+image: registry.digitalocean.com/aign/veganactivist:latest
+gitCommit: "initial"
+imagePullSecretName: aign

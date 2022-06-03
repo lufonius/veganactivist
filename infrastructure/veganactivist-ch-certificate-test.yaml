@@ -1,0 +1,13 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: veganactivist-ch-test-certs
+  namespace: test
+spec:
+  secretName: veganactivist-ch-test-tls
+  issuerRef:
+    name: veganactivist-test-lets-encrypt-issuer
+    kind: ClusterIssuer
+  commonName: 'test.veganactivist.ch'
+  dnsNames:
+    - 'test.veganactivist.ch'
