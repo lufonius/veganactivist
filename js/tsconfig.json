@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "jsxImportSource": "preact",
+    "isolatedModules": true,
+    "target": "es2020",
+    "module": "CommonJS",
+    "jsx": "react",
+    "jsxFactory": "h",
+    "lib": [
+      "es2020",
+      "dom"
+    ]
+  }
+}
